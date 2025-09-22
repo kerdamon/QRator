@@ -1,5 +1,5 @@
 import express, { type Request, type Response } from "express";
-import { WORLD_CONSTANT } from "./world/constants.js";
+import { WORLD_CONSTANT } from "#utils/constants.js";
 
 const app = express();
 const port = "3000";
