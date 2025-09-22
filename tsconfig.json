@@ -1,43 +1,28 @@
 {
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    // File Layout
-    "rootDir": "./src",
+    "esModuleInterop": true, // Allows mixing of ESM and CJS imports/exports
+    "skipLibCheck": true, // Skip type checking of declaration files. Code you don't control won't error and block.
+    "verbatimModuleSyntax": true, // Keep import/export syntax as-is (don't convert to require/module.exports). This ensures that only imports importing only types are optimized (removed).
+    "moduleDetection": "force", // Ensure all files are treated as modules (not scripts) to avoid global scope issues.
+    "target": "esnext",
+
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    "module": "nodenext",
+    "types": ["node"],
+    "lib": ["esnext"], // Specify library files to be included
     "outDir": "./dist",
 
-    // Environment Settings
-    "module": "nodenext",
-    "target": "esnext",
-    // For nodejs:
-    "lib": ["esnext"],
-    "types": ["node"],
-
-    // Other Outputs
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
 
-    // Stricter Typechecking Options
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-
-    // Style Options
-    // "noImplicitReturns": true,
-    // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noPropertyAccessFromIndexSignature": true,
-
-    // Recommended Options
-    "strict": true,
-    "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
-    "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
-    "skipLibCheck": true,
 
+    "rootDir": "./src",
     "paths": {
       "#/*": ["./src/*"],
       "#utils/*": ["./src/utils/*"]
