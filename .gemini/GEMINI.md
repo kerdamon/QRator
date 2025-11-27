@@ -36,7 +36,7 @@ Note: if you (agent) has better naming proposition, we can change that. I want t
 - typescript
 - react
 - tailwind
-  - some warpper for tailwind? is there something that works nicely with shadcn? Is this even needed?
+  - shadcn/ui is built on top of tailwind, so no wrapper is needed
 - shadcn/ui
 
 ### Backend
@@ -71,9 +71,10 @@ Note: if you (agent) has better naming proposition, we can change that. I want t
   - main branch in github
   - dev.qrator.kered.pl domain
 - staging
-  - when release branch is created staging env for that release is created
+  - when release branch is created from main, a staging environment for that release is created
+  - the staging environment would be destroyed when release is made
   - domain is something like: v1-3-0.staging.qrator.kered.pl
-  - PR to release branch scans the image, runs security scans etc. against that staging env (or that should be tested on pipeline triggered after merging to main, wdyt?)
+  - The release branch should be scanned for security vulnerabilities.
   - when PR to release branch is merged the github release draft is created
 - prod
   - domain: qrator.kered.pl
@@ -86,9 +87,17 @@ Note: if you (agent) has better naming proposition, we can change that. I want t
 - PR from feature branch should create [preview deployment](https://docs.dokploy.com/docs/core/applications/preview-deployments) in dokploy
 - for PR from feature branch tests should be ran and block merging if they do not pass
 
+## Tooling
+
+- `commitlint`: To enforce a consistent commit message format.
+- `Swagger`/`OpenAPI`: For documenting our backend API.
+
 ## Dev setup
 
 - environment management using devbox
 - js package management using pnpm
 - linting, formatting should work
-- convenient aliases (eg. for modules or shared)
+- convenient aliases:
+  - `@/components/*`
+  - `@/pages/*`
+  - `@/shared/*`
