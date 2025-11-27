@@ -2,8 +2,8 @@
 
 0. Clarification and fixup
 
-- clarification of instructions and prompts
-- you should ask clarification questions and edit instruction files so that they are clear, precise, doesn't have typos, there are no conflicting instructions, all my questions are resolved etc.
+- ask for clarification of instructions and prompts that you don't understand
+  - you should ask clarification questions and edit instruction files so that they are clear, precise, doesn't have typos, there are no conflicting instructions, all my questions are resolved etc.
 - base mcp server should be set up
   - github
   - [dokploy](https://github.com/Dokploy/mcp)
