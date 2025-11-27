@@ -13,6 +13,10 @@
       "headers": {
         "Authorization": "Bearer ${GEMINI_MCP_GITHUB_API_KEY}"
       }
+    },
+    "shadcn": {
+      "command": "npx",
+      "args": ["shadcn@latest", "mcp"]
     }
   }
 }
