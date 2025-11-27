@@ -1,6 +1,9 @@
 {
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.16.0/.schema/devbox.schema.json",
-  "packages": ["nodejs@24"],
+  "packages": [
+    "nodejs@24",
+    "pnpm@latest"
+  ],
   "shell": {
     "init_hook": ["export $(cat .gemini/.env | xargs)"],
     "scripts": {
