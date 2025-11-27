@@ -7,6 +7,12 @@
         "DOKPLOY_URL": "${GEMINI_MCP_DOKPLOY_URL}",
         "DOKPLOY_API_KEY": "${GEMINI_MCP_DOKPLOY_API_KEY}"
       }
+    },
+    "github": {
+      "httpUrl": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer ${GEMINI_MCP_GITHUB_API_KEY}"
+      }
     }
   }
 }
