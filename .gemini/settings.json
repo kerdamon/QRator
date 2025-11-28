@@ -19,11 +19,13 @@
       "args": ["shadcn@latest", "mcp"]
     },
     "context7": {
-      "httpUrl": "https://mcp.context7.com/mcp",
-      "headers": {
-        "CONTEXT7_API_KEY": "${GEMINI_MCP_CONTEXT7_API_KEY}",
-        "Accept": "application/json, text/event-stream"
-      }
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp",
+        "--api-key",
+        "${GEMINI_MCP_CONTEXT7_API_KEY}"
+      ]
     }
   }
 }
